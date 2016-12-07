@@ -138,12 +138,8 @@ define([
                 if (this.mfToExecute !== "") {
                     mx.data.action({
                         params: {
-                            applyto: "selection",
-                            actionname: this.mfToExecute,
-                            guids: [ this._contextObj.getGuid() ]
-                        },
-                        store: {
-                            caller: this.mxform
+                            applyto: "none",
+                            actionname: this.mfToExecute
                         },
                         callback: function (obj) {
                             //TODO what to do when all is ok!
