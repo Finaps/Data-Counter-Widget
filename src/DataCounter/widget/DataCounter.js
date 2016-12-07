@@ -47,10 +47,7 @@ define([
         templateString: widgetTemplate,
 
         // DOM elements
-      		//  inputNodes: null,
-      		//  colorSelectNode: null,
-      		// colorInputNode: null,
-       		// infoTextNode: null,
+
         CountResult: null,
 
         // Parameters configured in the Modeler.
@@ -130,11 +127,7 @@ define([
         // Attach events to HTML dom elements
         _setupEvents: function (e) {
             logger.debug(this.id + "._setupEvents");
-
-
-
-           	
-            
+           
             this.connect(this.CountResult, "click", function (e) {
                 // Only on mobile stop event bubbling!
                 this._stopBubblingEventOnMobile(e);
