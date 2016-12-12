@@ -72,9 +72,15 @@ define([
         // Attach events to HTML dom elements
         _setupEvents: function (e) {
             logger.debug(this.id + "._setupEvents");
+            if (this.mfToExecute!=="") {
+                dojoStyle.set(this.CountResult, {
+                    cursor: "pointer"
+                })
+            };
             this.connect(this.CountResult, "click", function (e) {
                 // Only on mobile stop event bubbling!
                 this._stopBubblingEventOnMobile(e);
+
 						
                 // If a microflow has been set execute the microflow on a click.
                 if (this.mfToExecute !== "") {
