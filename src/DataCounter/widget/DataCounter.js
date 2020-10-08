@@ -108,8 +108,10 @@ define([
        		mx.data.get({ 
  			    xpath: "//"+this.RetrieveObject+this.Constraint,
  			    count: true,
-                callback: dojoLang.hitch(this,function(ObjectList) {
-                    dojoHtml.set(this.CountResult,ObjectList.length.toString());
+                callback: dojoLang.hitch(this, function(ObjectList) {
+                    if (this.CountResult != null) {
+                        dojoHtml.set(this.CountResult,ObjectList.length.toString());
+                    }
     			})
             });
        	}
